@@ -1,7 +1,15 @@
+import React, { useState } from 'react';
 import './HomePage.css';
 
 
 function HomePage() {
+
+  const [isChecked, setIsChecked] = useState(false);
+  
+  function handleCheckboxChange() {
+    setIsChecked(!isChecked);
+  }
+
   return (
     <div className="home">
 
@@ -25,7 +33,7 @@ function HomePage() {
         <div className="box">
           <div className="boxElements">
 
-          <button className="checkbox"/>
+          <input className="checkbox" type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/>
 
           <p className="informations">
             TR120555
@@ -47,7 +55,7 @@ function HomePage() {
         <div className="box">
           <div className="boxElements">
 
-          <button className="checkbox"/>
+          <input className="checkbox" type="checkbox"/>
 
           <p className="informations">
             JVC200123
@@ -69,7 +77,7 @@ function HomePage() {
         <div className="box">
           <div className="boxElements">
 
-          <button className="checkbox"/>
+          <input className="checkbox" type="checkbox"/>
 
           <p className="informations">
             GGWP0007
@@ -91,8 +99,8 @@ function HomePage() {
         <div className="box">
           <div className="boxElements">
 
-          <button className="checkbox"/>
-          
+          <input className="checkbox" type="checkbox"/>
+
           <p className="informations">
             GGWP0007
           </p>
@@ -114,6 +122,7 @@ function HomePage() {
       <footer className="homeFooter">
         <p>Scandiweb Test assignment</p>
       </footer>
+      
     </div>
   );
 }
