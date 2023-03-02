@@ -1,17 +1,34 @@
 import React, { useState } from 'react';
 import './HomePage.css';
 import Checkbox from '../../components/checkbox/Checkbox';
-import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 
 function HomePage() {
+
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    navigate('/add-product');
+  };
 
   return (
     <div className="home">
 
       {/* Header */}
-      <Header title="Product List" primaryButton="ADD" deleteButton="MASS DELETE"/>
+      <header className="header">
+ 
+        <div className="title">
+          <p>Product List</p>
+        </div>
+        
+        <div  className="buttons">
+          <button className="primaryButton" onClick={handleClick}>ADD</button>
+          <button className="redButton">MASS DELETE</button>
+        </div>
+      
+      </header>
 
       {/* Body */}
       <div className="homeBody">

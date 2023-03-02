@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import './Header.css';
+import { useNavigate } from 'react-router-dom';
 
 
 function Header(props) {
+
+  const { to } = props;
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(to);
+  };
 
   return (
     <div>
@@ -14,8 +22,8 @@ function Header(props) {
         </div>
         
         <div  className="buttons">
-          <button className="primaryButton">{props.primaryButton}</button>
-          <button className="redButton">{props.deleteButton}</button>
+          <button className="primaryButton" onClick={handleClick}>{props.primaryButton}</button>
+          <button className="redButton">{props.secondaryButton}</button>
         </div>
       
       </header>
