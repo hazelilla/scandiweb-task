@@ -29,8 +29,34 @@ function ProductPage() {
       </header>
 
       {/* Body */}
-      <div className="homeBody">
+      <div className="productBody">
+        
+        <div className="inline">
+            <p className="tags">SKU</p>
+            <input className="input-style"></input>
+        </div>
 
+        <div className="inline">
+            <p className="tags">Name</p>
+            <input className="input-style"></input>
+        </div>
+
+        <div className="inline">
+            <p className="tags">Price ($)</p>
+            <input className="input-style"></input>
+        </div>
+
+        <div className="inline">
+            <p>Type Switcher</p>
+            <select className="select">
+                <option value="">Type Switcher</option>
+                <option value="option1">DVD-disc</option>
+                <option value="option2">Book</option>
+                <option value="option3">Furniture</option>
+            </select>
+        </div>
+        
+        
    
       </div>
 
