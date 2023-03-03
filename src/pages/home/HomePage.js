@@ -3,6 +3,7 @@ import './HomePage.css';
 import Checkbox from '../../components/checkbox/Checkbox';
 import Footer from '../../components/footer/Footer';
 import { useNavigate } from 'react-router-dom';
+import Button from '../../components/button/Button';
 
 
 function HomePage() {
@@ -24,8 +25,8 @@ function HomePage() {
         </div>
         
         <div  className="buttons">
-          <button className="primaryButton" onClick={handleClick}>ADD</button>
-          <button className="redButton">MASS DELETE</button>
+          <Button text="ADD" className="primaryButton" onClick={handleClick}/>
+          <Button text="MASS DELETE" className="redButton"/>
         </div>
       
       </header>

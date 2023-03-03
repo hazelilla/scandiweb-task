@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ProductPage.css';
 import Footer from '../../components/footer/Footer';
 import { useNavigate } from 'react-router-dom';
+import Button from '../../components/button/Button';
 
 function ProductPage() {
 
@@ -22,8 +23,8 @@ function ProductPage() {
         </div>
         
         <div  className="buttons">
-          <button className="saveButton">SAVE</button>
-          <button className="primaryButton" onClick={handleClick}>CANCEL</button>
+          <Button text="SAVE" className="blueButton"/>
+          <Button text="CANCEL" className="primaryButton" onClick={handleClick}/>
         </div>
       
       </header>
