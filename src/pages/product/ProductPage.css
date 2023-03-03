@@ -3,7 +3,7 @@
     margin-inline: 90px;
 }
 
-.productBody{
+.productBody {
    margin-top: 20px;
    display: flex;
    flex-direction: column;
@@ -37,21 +37,29 @@
     flex-direction: row;
 }
 
-.tags{
+.tags {
     text-align: start;
-    width: 60px;
+    width: 90px;
 }
 
 .input-style {
     margin-left: 50px;
     height: 30px;
     margin-top: 10px;
+    padding-right: 40px;
 }
 
-.select{
-    margin-left: 76px;
+.select {
+    margin-left: 144px;
     height: 50px;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    display: flex;
+    font-weight: bold;
+    
 }
 
 
